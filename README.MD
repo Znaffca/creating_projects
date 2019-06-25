@@ -12,4 +12,10 @@
 
 ### Changes in the future
 
--remove created repository (local and remote) and virtualenv with one command,
+- remove created repository (local and remote) and virtualenv with one command,
+- check if project name contains invalid chars
+- auto create environment variables and add them to shell configuration
+- code reformat
+
+### How to run this repository in your PC:
+ ```work in progress...```
