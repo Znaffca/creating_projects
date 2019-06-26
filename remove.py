@@ -4,17 +4,20 @@ import sys
 from github import Github
 import github
 
-project_path = os.environ['WORKSPACE']
-username = os.environ['GITHUB_USER']
-password = os.environ['GITHUB_PASS']
+project_path = os.environ["WORKSPACE"]
+username = os.environ["GITHUB_USER"]
+password = os.environ["GITHUB_PASS"]
+
 
 def remove():
     try:
         project_name = sys.argv[1]
         shutil.rmtree(project_path + "/" + project_name)
         print("Succesfully removed {} !".format(project_name))
-    except(IndexError, FileExistsError):
-        print("An unexpected error occured. Please make sure that you wrote a correct name or project folder was already deleted")
+    except (IndexError, FileExistsError):
+        print(
+            "An unexpected error occured. Please make sure that you wrote a correct name or project folder was already deleted"
+        )
         exit(0)
 
     g_user = Github(login_or_token=username, password=password).get_user()
