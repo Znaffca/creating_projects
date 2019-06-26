@@ -31,8 +31,11 @@ function create() {
 }
 
 function delete() {
+    # move to directory stores python files
     cd $HOME/.local/bin
     python3 remove.py $1
+    
+    # go back to home dir
     cd $HOME
     rmvirtualenv "$1_env"
 }
