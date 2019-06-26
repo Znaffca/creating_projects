@@ -29,3 +29,10 @@ function create() {
     exit
 
 }
+
+function delete() {
+    cd $HOME/.local/bin
+    python3 remove.py $1
+    cd $HOME
+    rmvirtualenv "$1_env"
+}
