@@ -1,19 +1,27 @@
 # SAMPLE SCRIPT TO AUTOMATE CREATING PROJECTS IN PYTHON
 
 ### How it suposed to work - what does that script should do:
+That simple script should automate creating and removing projects process in local computer and Github. It starts in os shell and has two simple commands
+
+### CREATE `project_name`
 
 - create project folder in specified directory 
+- check if specified project name contains invalid chars
 - add a few basic files like .gitignore, requirements, README
 - create a virtualenv with the name convention `{project_name}_env`
 - init git repository and add all created files to git
 - create remote repository with name like local project
 - add local repo to remote and push project to github
-- run Visual Studio Code with rcently created project
+- run Visual Studio Code with recently created project
+
+### DELETE `project_name`
+
+- remove local repository
+- delete remote Github repository
+- delete created virtualenv
 
 ### Changes in the future
 
-- remove created repository (local and remote) and virtualenv with one command,
-- check if project name contains invalid chars
 - auto create environment variables and add them to shell configuration
 - code reformat
 
