@@ -1,16 +1,6 @@
 import os
 from getpass import getpass
-
-
-def check_password(password):
-    invalid_chars = "~`#$&*()\\|[]{};'<>/?!"
-    new_pass = ""
-    for i in password:
-        if i in invalid_chars:
-            new_pass += f"\\{i}"
-        else:
-            new_pass += i
-    return new_pass
+from additionals import check_password
 
 
 def set_up():

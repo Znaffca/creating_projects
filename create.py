@@ -1,24 +1,6 @@
 import os
 import sys
-import re
-from github import Github
-
-project_path = os.environ["WORKSPACE"]
-username = os.environ["GITHUB_USER"]
-password = os.environ["GITHUB_PASS"]
-
-
-def check(char):
-    regex = re.compile("[@!#$%^&*()<>?/\\|}{~:]")
-    if regex.search(char) is None:
-        return char
-    return (
-        "Incorrect project name. Please enter the name using only alphanumeric chars."
-    )
-
-
-def get_github_user(username, password):
-    return Github(login_or_token=username, password=password).get_user()
+from additionals import check, get_github_user, username, password, project_path
 
 
 def create():

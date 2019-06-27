@@ -1,12 +1,8 @@
 import os
 import shutil
 import sys
-from create import get_github_user, project_path, username, password
+from additionals import get_github_user, project_path, username, password
 import github
-
-project_path = os.environ["WORKSPACE"]
-username = os.environ["GITHUB_USER"]
-password = os.environ["GITHUB_PASS"]
 
 
 def remove():
