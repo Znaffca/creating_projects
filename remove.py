@@ -1,7 +1,7 @@
 import os
 import shutil
 import sys
-from github import Github
+from create import get_github_user, project_path, username, password
 import github
 
 project_path = os.environ["WORKSPACE"]
@@ -20,7 +20,7 @@ def remove():
         )
         exit(0)
 
-    g_user = Github(login_or_token=username, password=password).get_user()
+    g_user = get_github_user(username, password)
     try:
         repo = g_user.get_repo(name=project_name)
         repo.delete()
