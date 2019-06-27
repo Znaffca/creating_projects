@@ -3,6 +3,9 @@
 ### How it suposed to work - what does that script should do:
 That simple script should automate creating and removing projects process in local computer and Github. It starts in os shell and has two simple commands
 
+### SetUp
+Run set_up.py to configure script to work. It create (if not exists) folder for your future projects and add some env vars to your .bashrc file (like basic info about your github account). It also contais a basic password verify -> when your password contain characters which are special for Linux shell, an "\\" is added before that char to make the readable
+
 ### CREATE `project_name`
 
 - create project folder in specified directory 
