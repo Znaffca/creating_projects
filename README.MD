@@ -29,8 +29,24 @@ Run set_up.py to configure script to work. It create (if not exists) folder for 
 
 ### Changes in the future
 
-- auto create environment variables and add them to shell configuration
-- code reformat, update error handling
+- add functionality to install on Windows-based systems
+- modify creating virtualenv depending of using virtualenv engine
+
+### WARNING
+Shell function requires to virtualenvwrapper installed on your pc. 
 
 ### How to run this repository in your PC:
- ```work in progress...```
+1. Clone repository on your pc
+2. Navigate to project
+3. Install requirements using `pip install -r requirements.txt`
+4. Run setup_py using python set_up.py, enter name of your workspace folder, and your github credentials.
+
+To create new project in python just write:
+
+```create project_name```
+
+To remove existing project just use:
+
+```delete project_name```
+
+Enjoy :)
