@@ -2,7 +2,7 @@
 
 
 function create() {
-    cd $HOME/.local/bin
+    cd $SCRIPT_FOLDER
     python3 create.py $1
     cd $WORKSPACE/$1
 
@@ -15,7 +15,7 @@ function create() {
 
     # add some basic files
     touch README.MD requirements.txt
-    cp $WORKSPACE/GITIGNORE\ FOLDER/.gitignore $WORKSPACE/$1
+    cp $SCRIPT_FOLDER/.gitignore $WORKSPACE/$1
 
     # commit and create connection with the remote repository
     git add .

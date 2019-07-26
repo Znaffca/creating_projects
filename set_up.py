@@ -12,6 +12,7 @@ def set_up():
         "export WORKSPACE=$HOME/{}".format(workspace),
         'export GITHUB_USER="{}"'.format(username),
         'export GITHUB_PASS="{}"'.format(check_password(password)),
+        'export SCRIPT_FOLDER="{}"'.format(os.path.abspath(os.path.dirname(__file__))),
         "source {}/.my_command.sh".format(os.path.abspath(os.path.dirname(__file__))),
     ]
 
